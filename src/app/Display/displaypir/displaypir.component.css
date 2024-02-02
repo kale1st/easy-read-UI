@@ -1,0 +1,22 @@
+.arrow-back{
+    margin-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+img{
+    max-width: 200px;
+    cursor: pointer;
+}
+
+@media (max-width: 769px) {
+    img {
+      width: 150px;
+     
+    } 
+}
+@media (max-width: 350px) {
+    .pirs{
+        text-align: center;
+    }
+}

@@ -1,0 +1,24 @@
+<div class="w3-row-padding">
+  <div class="my-3">
+    <div class="w3-card">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h2>Kitaplık</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col pirs text-center">
+            <img
+              *ngFor="let pir of pirs; let i = index"
+              [routerLink]="['/display/chapter/' + pir.pirId]"
+              class="img rounded m-1"
+              [src]="pir.imageUrl"
+              sizes="(min-width: 600px) 600px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
