@@ -51,12 +51,6 @@ border-radius: 5px;
 }
 
 /* =======pir name badge========= */
-:root {
-  --grd-1: #15358a;
-  --grd-2: #904bb8;
-  --grd-mix: linear-gradient(135deg, var(--grd-1), var(--grd-2));
-}
-
 .v-badge {
   position: relative;
   text-decoration: none;
@@ -112,19 +106,6 @@ border-radius: 5px;
   bottom: -1px;
   left: -1px;
   border-radius: 999px;
-}
-
-.inspired {
-  position: absolute;
-  bottom: 8%;
-  color: rgba(255, 255, 255, .5);
-  font-size: 12px;
-  text-decoration: none;
-  transition: color .2s ease;
-}
-
-.inspired:hover {
-  color: rgba(255, 255, 255, .8);
 }
   /* ======Book Effect Background===== */
   
