@@ -17,23 +17,20 @@
     </div>
     <div class="row">
       <div class="col">
-        <form [formGroup]="retrieveChaptersNamesForm" novalidate>
+        <div *ngFor="let chapter of chaptersNames; let i = index">
+          <input
+            class="btn text-start"
+            type="button"
+            [value]="chapter.chapterName"
+            [formControlName]="chapter.chapterName"
+            [routerLink]="[
+              '/display/chapterContent/',
+              chapter.chapterId,
+              chapter.pirId
+            ]"
+          />
           <hr />
-          <div *ngFor="let chapter of chaptersNames; let i = index">
-            <input
-              class="btn text-start"
-              type="button"
-              [value]="chapter.chapterName"
-              [formControlName]="chapter.chapterName"
-              [routerLink]="[
-                '/display/chapterContent/',
-                chapter.chapterId,
-                chapter.pirId
-              ]"
-            />
-            <hr />
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>

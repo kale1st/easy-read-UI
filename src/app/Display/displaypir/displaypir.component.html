@@ -12,10 +12,11 @@
             <img
               *ngFor="let pir of pirs; let i = index"
               [routerLink]="['/display/chapter/' + pir.pirId]"
-              class="img rounded m-1"
+              class="img rounded m-1 imgPir"
               [src]="pir.imageUrl"
               sizes="(min-width: 600px) 600px"
             />
+            <br />
           </div>
         </div>
       </div>
