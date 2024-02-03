@@ -1,3 +1,5 @@
+
+
 .arrow-back{
     margin-right: 20px;
     margin-top: 20px;
@@ -9,12 +11,64 @@
     cursor: pointer;
 }
 
+.shelf{
+    background-image: url('/assets/wood_background.jpg');
+    background-size: contain;
+    border-radius: 10px;
+}
+
+.title{
+    position: relative;
+    margin-top: -75px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.pirs{
+    margin-top: 50px;
+}
+
+.img-link {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .img-link img {
+    transition: transform 0.3s;
+  }
+  
+  .img-link:hover img {
+    transform: scale(1.1); /* Change the scale factor as desired */
+  }
+  
+
+
+
+
 @media (max-width: 769px) {
-    img {
+    .imgPir {
       width: 150px;
      
     } 
+    .title{  
+        font-size: 35px;
+    }
+    .shield{
+        width: 150px;
+    }
 }
+@media (min-width: 769px) {
+     .shield{
+        width: 200px;
+    }
+    .title{  
+        font-size: 45px;
+    }
+}
+
+
 @media (max-width: 350px) {
     .pirs{
         text-align: center;

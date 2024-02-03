@@ -1,25 +1,23 @@
-<div class="w3-row-padding">
-  <div class="my-3">
-    <div class="w3-card">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 text-center">
-            <h2>Kitaplık</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col pirs text-center">
-            <img
-              *ngFor="let pir of pirs; let i = index"
-              [routerLink]="['/display/chapter/' + pir.pirId]"
-              class="img rounded m-1 imgPir"
-              [src]="pir.imageUrl"
-              sizes="(min-width: 600px) 600px"
-            />
-            <br />
-          </div>
-        </div>
-      </div>
+<div class="container my-2 py-2 shelf">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <img class="img shield" src="/assets/shield.png" alt="" />
+      <h2 class="title">Kitaplık</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col pirs text-center">
+      <ng-container *ngFor="let pir of pirs; let i = index">
+        <a [routerLink]="['/display/chapter/' + pir.pirId]" class="img-link">
+          <img
+            class="img-thumbnail rounded m-1 imgPir"
+            [src]="pir.imageUrl"
+            sizes="(min-width: 600px) 600px"
+            alt="Pir Image"
+          />
+        </a>
+      </ng-container>
+      <br />
     </div>
   </div>
 </div>
