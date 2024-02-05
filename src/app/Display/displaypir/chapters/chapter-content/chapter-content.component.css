@@ -1,8 +1,8 @@
-p{
+p {
   text-align: left;
 }
 
-button > span{
+button > span {
   color: black;
   padding: 0;
 }
@@ -11,24 +11,27 @@ button > span{
   font-size: 27px;
 }
 
-p b{
+p b {
   cursor: pointer;
 }
 
 /* read mode classes*/
-.light-mode{
-background-color: white;
-color: black;
-border-radius: 5px;
+.light-mode {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
 }
 
-.night-mode{
-background-color: #282a36;
-color: white;
-border-radius: 5px;
+.night-mode {
+  background-color: #282a36;
+  color: white;
+  border-radius: 5px;
 }
 
-
+.page-header span b,
+.page-body p {
+  font-family: "Roboto Slab", serif;
+}
 /* Read mode buttons */
 
 .multi-button button {
@@ -86,14 +89,24 @@ border-radius: 5px;
   width: 1px;
   height: 100%;
   left: 12px;
-  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, .7), transparent);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
 }
 
 .v-badge span:after {
   width: 100%;
   height: 1px;
   top: 12px;
-  background: linear-gradient(to left, transparent, rgba(255, 255, 255, .7), transparent);
+  background: linear-gradient(
+    to left,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
 }
 
 .v-badge:before {
@@ -107,71 +120,69 @@ border-radius: 5px;
   left: -1px;
   border-radius: 999px;
 }
-  /* ======Book Effect Background===== */
-  
-  .pages, .pages2, #book {
-    border-radius: 4px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.16), 0 3px 8px rgba(0, 0, 0, 0.23);
-  }
-  
-  .pages{
-    margin: 0 -3px;
-    padding: 0 3px;
-    text-align: -webkit-center;
-  }
-  
-  #book {
-    border-radius: 4px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.16), 0 3px 8px rgba(0, 0, 0, 0.23);
-  }
-  
-  #book .page {
-    flex: 1;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  #book .page .page-header {
-    flex: 1;
-    font-family: Lato;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: darken(lightgray, 8%);
-    text-align: center;
-    padding-top: 2rem;
-    line-height: 2rem;
-  }
+/* ======Book Effect Background===== */
 
+.pages,
+.pages2,
+#book {
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.16), 0 3px 8px rgba(0, 0, 0, 0.23);
+}
 
+.pages {
+  margin: 0 -3px;
+  padding: 0 3px;
+  text-align: -webkit-center;
+}
+
+#book {
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.16), 0 3px 8px rgba(0, 0, 0, 0.23);
+}
+
+#book .page {
+  flex: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#book .page .page-header {
+  flex: 1;
+  font-family: Lato;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: darken(lightgray, 8%);
+  text-align: center;
+  padding-top: 2rem;
+  line-height: 2rem;
+}
+
+#book .page .page-body {
+  min-height: 720px;
+}
+
+#book .page .page-body p {
+  font-size: 1.125rem;
+  font-family: "Georgia";
+  letter-spacing: 0.5px;
+  text-align: justify;
+  line-height: 1.7;
+  margin: 0;
+  padding-top: 1.5rem;
+}
+
+#book .page .page-footer {
+  height: 72px;
+  line-height: 72px;
+  text-align: center;
+  font-family: Lato;
+  font-size: 0.75rem;
+  color: darken(lightgray, 8%);
+}
+
+@media (min-width: 769px) {
   #book .page .page-body {
-    min-height: 720px;
-  }  
- 
-  
-  #book .page .page-body p {
-    font-size: 1.125rem;
-    font-family: 'Georgia';
-    letter-spacing: 0.5px;
-    text-align: justify;
-    line-height: 1.7;
-    margin: 0;
-    padding-top: 1.5rem;
+    max-width: 75%;
   }
-  
-  #book .page .page-footer {
-    height: 72px;
-    line-height: 72px;
-    text-align: center;
-    font-family: Lato;
-    font-size: 0.75rem;
-    color: darken(lightgray, 8%);
-  }
-
-
-  @media (min-width: 769px) {
-    #book .page .page-body {
-      max-width: 75%;
-    }  
- 
 }
