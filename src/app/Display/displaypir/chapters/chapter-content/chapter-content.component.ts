@@ -55,10 +55,8 @@ export class ChapterContentComponent implements OnInit {
       .subscribe({
         next: async (chapter: Chapter) => {
           this.selectedChapter = await chapter;
-          if (
-            this.selectedChapter.wordPairs !== undefined &&
-            this.selectedChapter.wordPairs.length > 0
-          ) {
+
+          if (this.selectedChapter.wordPairs !== undefined) {
             //modifies the chapter content adding <b> tag to wordpairs
             for (const wordpair of Object.values(
               this.selectedChapter.wordPairs
