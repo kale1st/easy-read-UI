@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { DisplaypirComponent } from './Display/displaypir/displaypir.component';
 import { ChaptersComponent } from './Display/displaypir/chapters/chapters.component';
@@ -21,8 +21,7 @@ import { DialogComponent } from './dialog/dialog.component';
     DisplaypirComponent,
     ChaptersComponent,
     ChapterContentComponent,
-    DialogComponent
-
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,9 +30,10 @@ import { DialogComponent } from './dialog/dialog.component';
     CommonModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

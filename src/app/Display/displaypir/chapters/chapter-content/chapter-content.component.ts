@@ -3,16 +3,16 @@ import {
   ElementRef,
   OnInit,
   ViewChild,
+  ViewContainerRef,
   ViewEncapsulation,
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DisplaypirService } from 'src/app/services/displaypir.service';
 import { Chapter } from 'src/models/Chapter';
 import { WordPair } from 'src/models/WordPair';
-import { MatDialog } from '@angular/material/dialog';
-import { DialogComponent } from 'src/app/dialog/dialog.component';
 import { PireditService } from 'src/app/services/piredit.service';
 import { Pir } from 'src/models/Pir';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-chapter-content',
@@ -35,8 +35,9 @@ export class ChapterContentComponent implements OnInit {
   constructor(
     private activeroute: ActivatedRoute,
     private displaypirservice: DisplaypirService,
-    private dialog: MatDialog,
-    private pirService: PireditService
+    private pirService: PireditService,
+    private snackBar: MatSnackBar,
+    private viewContainerRef: ViewContainerRef
   ) {}
 
   async ngOnInit() {
@@ -104,8 +105,12 @@ export class ChapterContentComponent implements OnInit {
 
   openDialog(wordpair: WordPair): void {
     if (wordpair !== undefined) {
-      this.dialog.open(DialogComponent, {
-        data: { word: wordpair.word, meaning: wordpair.meaning },
+      // this.dialog.open(DialogComponent, {
+      //   data: { word: wordpair.word, meaning: wordpair.meaning },
+      // });
+      this.snackBar.open(wordpair.meaning, 'x', {
+        duration: 3000,
+        panelClass: ['show-word'],
       });
     }
   }
